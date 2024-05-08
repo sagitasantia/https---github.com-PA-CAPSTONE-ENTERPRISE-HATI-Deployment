@@ -66,7 +66,7 @@ if selected == 'EDA':
         # Memfilter data untuk hanya mencakup 10 nama 
         filtered_data = data[data['Nama'].isin(top_names)]
 
-        pilih_column = st.selectbox("Pilih Kolom untuk Dibandingkan dengan Nama", ['Modal', 'Laba'])
+        pilih_column = st.selectbox("Pilih Kolom ", ['Modal', 'Laba'])
 
         # Menggunakan grafik batang
         fig = px.bar(filtered_data, x='Nama', y=pilih_column, color='Nama', title=f"Hubungan Nama dengan {pilih_column} untuk 10 Nama dengan Laba Tertinggi")
